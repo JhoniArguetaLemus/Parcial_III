@@ -1,0 +1,101 @@
+﻿
+body {
+    box-sizing: border-box;
+    background-color:white;
+    margin-top: 50px;
+    overflow:auto;
+}
+
+.navbar {
+    padding: 1rem;
+    color: white;
+    background-color: #070f4e;
+    font-size: 20px;
+    
+}
+
+.navbar-collapse {
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar-toggler{
+    background-color:white;
+    
+}
+
+
+.nav-item:hover {
+    cursor: pointer;
+    padding:1px;
+    background-color: lime;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width:767px){
+    .nav-brand{
+        display:none;
+    }
+
+    
+}
+
+
+.log{
+    background-color: #3ab1c8;
+    color: black;
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+}
+
+.reg{
+    background-color: #3ab1c8;
+    color: black;
+    padding: 10px;
+    width: 600px;
+    height: 700px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 18px 74px 4px rgba(0,0,0,0.75);
+}
+
+h2{
+    margin-top: 20px;
+    
+}
+
+#form1 input{
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+   
+}
+
+
+
+
+.form-inicio{
+    margin-top:20px;
+
+}
+
+#form1 Button{
+    border-radius: 50px;
+}
+
