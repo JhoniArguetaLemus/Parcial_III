@@ -70,16 +70,66 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administracion.aspx" />
+    <Content Include="ConsultaSalud.aspx" />
+    <Content Include="ConsultaTEC.aspx" />
+    <Content Include="Consultar.aspx" />
+    <Content Include="Eliminar.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\administrador.ico" />
     <Content Include="images\burger.png" />
+    <Content Include="images\doctor.ico" />
     <Content Include="images\fondo.jpg" />
+    <Content Include="images\fondo2.jpg" />
+    <Content Include="images\fondo_salud.jpg" />
+    <Content Include="images\home.ico" />
+    <Content Include="images\laptop.ico" />
+    <Content Include="images\login.png" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="MenúSalud.aspx" />
+    <Content Include="MenúTEC.aspx" />
+    <Content Include="Modificar.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion.aspx.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion.aspx.designer.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaSalud.aspx.cs">
+      <DependentUpon>ConsultaSalud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaSalud.aspx.designer.cs">
+      <DependentUpon>ConsultaSalud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaTEC.aspx.cs">
+      <DependentUpon>ConsultaTEC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaTEC.aspx.designer.cs">
+      <DependentUpon>ConsultaTEC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar.aspx.cs">
+      <DependentUpon>Consultar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultar.aspx.designer.cs">
+      <DependentUpon>Consultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -97,11 +147,26 @@
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menú.apx.cs">
+    <Compile Include="MenúSalud.aspx.cs">
+      <DependentUpon>MenúSalud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menú.apx.designer.cs">
-      <DependentUpon>Menú.apx.cs</DependentUpon>
+    <Compile Include="MenúSalud.aspx.designer.cs">
+      <DependentUpon>MenúSalud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenúTEC.aspx.cs">
+      <DependentUpon>MenúTEC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenúTEC.aspx.designer.cs">
+      <DependentUpon>MenúTEC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.aspx.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar.aspx.designer.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
@@ -113,7 +178,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Menú.aspx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Parcial_III.Registro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Modificar.aspx.cs" Inherits="Parcial_III.Modificar" %>
 
 <!DOCTYPE html>
 
@@ -26,22 +26,15 @@
 
       <ul class="navbar-nav d-flex justify-content-center align-items-center bg-gray">
 
-
-           <li class="nav-item">
-          <a class="nav-link active link-light " aria-current="page" href="Consultar.aspx">Consultar</a>
-        </li>
-
-          <li class="nav-item">
-          <a class="nav-link active link-light " aria-current="page" href="logout.aspx">Cerrar Sesión</a>
-        </li>
-
         <li class="nav-item">
-          <a class="nav-link active link-light " aria-current="page" href="login.aspx">Home</a>
+          <a class="nav-link active link-light " aria-current="page" href="#">Home</a>
         </li>
 
           
 
-        
+        <li class="nav-item">
+          <a class="nav-link active link-light " aria-current="page" href="logout.aspx">Cerrar Sesión</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -52,12 +45,13 @@
     
     <form id="form1" runat="server"  >
         <center>
-        <h2>Registro de estudiantes </h2>
+        <h2>Modificar Registro</h2>
             <br />
-            <asp:Label ID="lbBienvenida" runat="server" />
-            <div class="form-inicio">
-            <asp:TextBox id="txtNombre" runat="server" placeholder="Nombre" />
             
+            <div class="form-inicio">
+            <asp:TextBox ID="idOculto"  runat="server"   />
+                <br />
+            <asp:TextBox id="txtNombre" runat="server" placeholder="Nombre" />
             <br />
              
              <asp:TextBox id="txtCodigo" runat="server" placeholder="Código" />
@@ -79,17 +73,17 @@
 
 
             Facultad:
-            <asp:DropDownList ID="ddFacultad" runat="server" OnSelectedIndexChanged="ddFacultad_SelectedIndexChanged" >
+            <asp:DropDownList ID="ddFacultad" runat="server" >
                 <asp:ListItem Value="TEC">Ciencia y Tecnología</asp:ListItem>
                 <asp:ListItem Value="Salud">Ciencias de la Salud</asp:ListItem>
-                <asp:ListItem Value="ADM">No aplica (ADM)</asp:ListItem>
+                <asp:ListItem Value="ADM">No aplica</asp:ListItem>
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />
             
              Carrera:
-             <asp:DropDownList ID="ddCarrera" runat="server" OnSelectedIndexChanged="ddCarrera_SelectedIndexChanged" >
+             <asp:DropDownList ID="ddCarrera" runat="server" >
                  <asp:ListItem>Ing. en Gestion y Manejo de Bases de Datos</asp:ListItem>
                  <asp:ListItem>Ing. en Sistemas y Redes Informáticas (Semipresencial)</asp:ListItem>
                  <asp:ListItem>Ing. en Sistemas y Redes Informáticas (Virtual)</asp:ListItem>
@@ -98,13 +92,12 @@
                  <asp:ListItem>Doctorado en Medicina</asp:ListItem>
                  <asp:ListItem>Lic. en Enfermería</asp:ListItem>
                  <asp:ListItem>Téc en Enfermería</asp:ListItem>
-                 <asp:ListItem>No aplica (ADM)</asp:ListItem>
+                 <asp:ListItem>No aplica</asp:ListItem>
                  <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <br />
             
-            <asp:Button Text="Registrar" runat="server" ID="txtRegistrar" CssClass="btn btn-light" OnClick="txtRegistrar_Click" />
-            <br />
+            <asp:Button Text="Modificar" runat="server" ID="btnModificar" CssClass="btn btn-light" OnClick="btnModificar_Click" />
             <asp:Label ID="lbRegistro" runat="server"></asp:Label>
         </div>
         </center>

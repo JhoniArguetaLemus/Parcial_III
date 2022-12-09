@@ -10,7 +10,7 @@
 
 namespace Parcial_III
 {
-    public partial class Menú
+    public partial class Eliminar
     {
 
         /// <summary>

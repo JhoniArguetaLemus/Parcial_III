@@ -11,7 +11,7 @@ namespace Parcial_III
 {
 
 
-    public partial class Registro
+    public partial class Modificar
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace Parcial_III
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control lbBienvenida.
+        /// Control idOculto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbBienvenida;
+        protected global::System.Web.UI.WebControls.TextBox idOculto;
 
         /// <summary>
         /// Control txtNombre.
@@ -105,13 +105,13 @@ namespace Parcial_III
         protected global::System.Web.UI.WebControls.DropDownList ddCarrera;
 
         /// <summary>
-        /// Control txtRegistrar.
+        /// Control btnModificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtRegistrar;
+        protected global::System.Web.UI.WebControls.Button btnModificar;
 
         /// <summary>
         /// Control lbRegistro.

@@ -4,64 +4,71 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Parcial_III
 {
     public partial class Registro : System.Web.UI.Page
     {
+        MySqlConnection con = new MySqlConnection(@"Data Source=localhost; port=3306; Initial Catalog=registro_estudiantes; User Id=root; password=''");
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
 
-            ListItem i;
-
-            //facultades
-            i = new ListItem("Facultad de Ciencia y Tecnología", "TEC");
-            ddLista.Items.Add(i);
-
-            i = new ListItem("Ciencias de la Salud", "Salud");
-            ddLista.Items.Add(i);
-
-            i = new ListItem("No aplica", "ADM");
-            ddLista.Items.Add(i);
-            //carreras- ciencia y tecnologia
-
-            i = new ListItem("Ing. en Gestion y Manejo de Bases de Datos", "Ingeniería en Gestion y Manejo de Bases de Datos");
-            ddCarrera.Items.Add(i);
-
-            i = new ListItem("Ing. en Sistemas y Redes Informáticas (Semipresencial)", "Ingeniería en Sistemas y Redes Informáticas (Semipresencial) ");
-            ddCarrera.Items.Add(i);
+            lbBienvenida.Text = "¡Bienvenido/a!: " + Session["usuario"].ToString();
 
 
-            i = new ListItem("Ing. en Sistemas y Redes Informáticas (Virtual)", "Ingeniería en Sistemas y Redes Informáticas (Virtual)");
-            ddCarrera.Items.Add(i);
+        }
 
-            i = new ListItem("Téc en Ingeniería en Sistemas y Redes Informáticas", "Técnico en Ingeniería en Sistemas y Redes Informáticas");
-            ddCarrera.Items.Add(i);
+        protected void txtRegistrar_Click(object sender, EventArgs e)
+        {
 
-            i = new ListItem("Téc en Ingeniería en Sistemas y Redes Informáticas (Virtual)", "Técnico en Ingeniería en Sistemas y Redes Informáticas (Virtual)");
-            ddCarrera.Items.Add(i);
+            con.Open();
 
-            //ciencias de la salud
+            MySqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO estudiantes ( código, nombre, usuario, contraseña, telefono , correo, facultad, carrera) VALUES ('" + txtCodigo.Text + "','" +txtNombre.Text + "','" +txtUsuario.Text + "','" + txtContrasenna.Text + "','" + txtTelefono.Text + "','" + txtCorreo.Text + "','" + ddFacultad.Text + "', '"+ddCarrera.Text+ "' )";
 
-            i = new ListItem("Doctorado en Medicina", "Doctorado en Medicina");
-            ddCarrera.Items.Add(i);
+            cmd.ExecuteNonQuery();
 
-            i = new ListItem("Lic. en Enfermería", "Licenciatura en Enfermería");
-            ddCarrera.Items.Add(i);
+            con.Close();
 
-            i = new ListItem("Téc en Enfermería", "Técnico en Enfermería");
-            ddCarrera.Items.Add(i);
+            lbRegistro.Text = "Datos guardados correctamente!";
 
+            LimpiarCampos();
 
+        }
 
+        public void LimpiarCampos()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtUsuario.Text = "";
+            txtContrasenna.Text = "";
+            txtTelefono.Text = "";
+            txtCorreo.Text = "";
+        }
 
+  
+        protected void ddCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
 
-            i = new ListItem("No aplica", "ADM");
-            ddCarrera.Items.Add(i);
-            //carreras-ciencias de la salud
+        protected void ddFacultad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddFacultad.Text=="Ciencia y Tecnología"){
+                ddCarrera.Items.FindByText("Lic. en Enfermería").Enabled = false;
 
-
-
+            }
         }
     }
 }
