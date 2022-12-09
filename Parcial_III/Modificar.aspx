@@ -26,15 +26,22 @@
 
       <ul class="navbar-nav d-flex justify-content-center align-items-center bg-gray">
 
-        <li class="nav-item">
-          <a class="nav-link active link-light " aria-current="page" href="#">Home</a>
+       
+          <li class="nav-item">
+          <a class="nav-link active link-light " aria-current="page" href="Consultar.aspx">Consultar</a>
         </li>
 
           
 
         <li class="nav-item">
           <a class="nav-link active link-light " aria-current="page" href="logout.aspx">Cerrar Sesión</a>
+
         </li>
+
+           <li class="nav-item">
+          <a class="nav-link active link-light " aria-current="page" href="Administracion.aspx">Home</a>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -98,6 +105,7 @@
             <br />
             
             <asp:Button Text="Modificar" runat="server" ID="btnModificar" CssClass="btn btn-light" OnClick="btnModificar_Click" />
+                <br />
             <asp:Label ID="lbRegistro" runat="server"></asp:Label>
         </div>
         </center>

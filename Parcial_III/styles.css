@@ -80,6 +80,7 @@ body {
     padding: 10px;
     width: 1000px;
     height: 650px;
+    overflow:auto;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -118,4 +119,3 @@ h2{
 }
 
 
-/*Pagina administracion*/
